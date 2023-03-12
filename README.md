@@ -11,10 +11,10 @@ You may need to edit slighly the header to be able to use 'planet_position.py'.
 # Files
 find_conjunction.py: Contains a function that is finding all the alignment a three planets for a given time. It is using NASA JPL Horizons Ephemerid for the 
 calculation of planet position. 
-planet_position.py: make the calculation of conjunction for a given period, and the calculation of conjunction for all earthquakes>Mw_min (minimum magnitude) 
+test_conjunction.py: make the calculation of conjunction for a given period, and the calculation of conjunction for all earthquakes>Mw_min (minimum magnitude) 
 for the same given period. 
 
-Using "planet_position.py" it is possible to compare the percentage of dates without conjunction and the percentage of earthquakes without conjunction. 
+Using "test_conjonction.py" it is possible to compare the percentage of dates without conjunction and the percentage of earthquakes without conjunction. 
 If earthquakes were triggered by planet alignment, the percentage of earthquakes without conjunction must be much smaller than the percentage of dates without conjunction.
 
 # Some results
