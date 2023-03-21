@@ -1,4 +1,4 @@
-def find_conjunction(date,celestial_bodies,threshold_angle,model_ephemeris):
+def find_conjunction(date,celestial_bodies,threshold_angle,model_ephemeris,other_info=''):
     """
         Find_conjunction is a function that is returning a list of conjunction for a given date.
         Parameters:
@@ -52,11 +52,11 @@ def find_conjunction(date,celestial_bodies,threshold_angle,model_ephemeris):
         # If there is a conjonction
         if 180 - angle < threshold_angle or angle < threshold_angle:
             if max_norm_i == 0:
-                conjunction_list.append('{0}-{1}-{2}    Angle: {3}'.format(triplet[0], triplet[2], triplet[1], angle))
+                conjunction_list.append('{4}    {0}-{1}-{2}    Angle:{3}'.format(triplet[0], triplet[2], triplet[1], angle, str(other_info)))
             elif max_norm_i == 1:
-                conjunction_list.append('{0}-{1}-{2}    Angle: {3}'.format(triplet[1], triplet[0], triplet[2], angle))
+                conjunction_list.append('{4}    {0}-{1}-{2}    Angle:{3}'.format(triplet[1], triplet[0], triplet[2], angle, str(other_info)))
             elif max_norm_i == 2:
-                conjunction_list.append('{0}-{1}-{2}    Angle: {3}'.format(triplet[0], triplet[1], triplet[2], angle))
+                conjunction_list.append('{4}    {0}-{1}-{2}    Angle:{3}'.format(triplet[0], triplet[1], triplet[2], angle, str(other_info)))
 
     return conjunction_list
 
